@@ -1,0 +1,201 @@
+{
+  "experiment_id": "demo_experiment",
+  "timestamp": "2026-03-05T21:42:57.009741",
+  "model": "claude-sonnet-4-20250514",
+  "templates": [
+    "direct",
+    "expert_framing",
+    "step_by_step",
+    "structured_output"
+  ],
+  "test_cases": 3,
+  "results": [
+    {
+      "template_name": "direct",
+      "test_case_id": "tc_photosynthesis",
+      "prompt_used": "What is photosynthesis and why is it important?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECotrP4oZPJHeEh2ub'}"
+    },
+    {
+      "template_name": "expert_framing",
+      "test_case_id": "tc_photosynthesis",
+      "prompt_used": "You are a senior expert. Provide a concise, accurate, and well-structured answer to the following question:\n\nWhat is photosynthesis and why is it important?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECqJwAxqwsZh6HvkML'}"
+    },
+    {
+      "template_name": "step_by_step",
+      "test_case_id": "tc_photosynthesis",
+      "prompt_used": "Think step by step and explain your reasoning clearly before giving a final answer.\n\nQuestion: What is photosynthesis and why is it important?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECrRQcbMM17yE1mcQm'}"
+    },
+    {
+      "template_name": "structured_output",
+      "test_case_id": "tc_photosynthesis",
+      "prompt_used": "Answer the question below. Format your response with:\n1. A one-sentence summary\n2. Key points (bullet list)\n3. A brief conclusion\n\nQuestion: What is photosynthesis and why is it important?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECsX8a4Qpx73c1mZYb'}"
+    },
+    {
+      "template_name": "direct",
+      "test_case_id": "tc_recursion",
+      "prompt_used": "Explain recursion in programming with a simple example.",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECteMPAARKT9DRWWX2'}"
+    },
+    {
+      "template_name": "expert_framing",
+      "test_case_id": "tc_recursion",
+      "prompt_used": "You are a senior expert. Provide a concise, accurate, and well-structured answer to the following question:\n\nExplain recursion in programming with a simple example.",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECujqMXZBMqcTF7kHs'}"
+    },
+    {
+      "template_name": "step_by_step",
+      "test_case_id": "tc_recursion",
+      "prompt_used": "Think step by step and explain your reasoning clearly before giving a final answer.\n\nQuestion: Explain recursion in programming with a simple example.",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECvrJuj7TAFxeBNAwZ'}"
+    },
+    {
+      "template_name": "structured_output",
+      "test_case_id": "tc_recursion",
+      "prompt_used": "Answer the question below. Format your response with:\n1. A one-sentence summary\n2. Key points (bullet list)\n3. A brief conclusion\n\nQuestion: Explain recursion in programming with a simple example.",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECwzGLqb5raHBCKzDQ'}"
+    },
+    {
+      "template_name": "direct",
+      "test_case_id": "tc_climate_change",
+      "prompt_used": "What are the main causes and effects of climate change?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECy8UfmB4dy4fgZ4c6'}"
+    },
+    {
+      "template_name": "expert_framing",
+      "test_case_id": "tc_climate_change",
+      "prompt_used": "You are a senior expert. Provide a concise, accurate, and well-structured answer to the following question:\n\nWhat are the main causes and effects of climate change?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECzFT66rgsZaQPuh2p'}"
+    },
+    {
+      "template_name": "step_by_step",
+      "test_case_id": "tc_climate_change",
+      "prompt_used": "Think step by step and explain your reasoning clearly before giving a final answer.\n\nQuestion: What are the main causes and effects of climate change?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkED1YahpibL6mje3bym'}"
+    },
+    {
+      "template_name": "structured_output",
+      "test_case_id": "tc_climate_change",
+      "prompt_used": "Answer the question below. Format your response with:\n1. A one-sentence summary\n2. Key points (bullet list)\n3. A brief conclusion\n\nQuestion: What are the main causes and effects of climate change?",
+      "raw_output": "",
+      "latency_ms": 0.0,
+      "scores": {
+        "keyword_coverage": 0.0,
+        "forbidden_penalty": 1.0,
+        "length_score": 0.0,
+        "coherence": 0.0
+      },
+      "overall_score": 0.25,
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkED2g3tEUBJnKjJk26X'}"
+    }
+  ],
+  "summary": {
+    "best_template": "N/A",
+    "template_summary": {},
+    "avg_latency_ms": 0,
+    "total_runs": 12,
+    "error_count": 12
+  }
+}

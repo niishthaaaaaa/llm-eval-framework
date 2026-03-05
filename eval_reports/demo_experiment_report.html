@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LLM Eval – demo_experiment</title>
+<style>
+  :root {
+    --bg: #0f1117; --surface: #1a1d2e; --accent: #7c6af7;
+    --green: #4ade80; --red: #f87171; --text: #e2e8f0; --muted: #94a3b8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; padding: 2rem; }
+  h1 { font-size: 1.8rem; margin-bottom: .25rem; }
+  h2 { font-size: 1.1rem; color: var(--accent); margin: 2rem 0 .75rem; text-transform: uppercase; letter-spacing: .05em; }
+  .meta { color: var(--muted); font-size: .85rem; margin-bottom: 2rem; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 1rem; margin-bottom: 2rem; }
+  .kpi { background: var(--surface); border-radius: 10px; padding: 1.2rem; }
+  .kpi .label { font-size: .75rem; color: var(--muted); margin-bottom: .3rem; }
+  .kpi .value { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+  table { width: 100%; border-collapse: collapse; font-size: .82rem; background: var(--surface); border-radius: 10px; overflow: hidden; }
+  th { background: #252840; padding: .6rem .8rem; text-align: left; color: var(--muted); font-weight: 600; }
+  td { padding: .55rem .8rem; border-top: 1px solid #252840; vertical-align: top; }
+  tr.best td { background: #1e2d1e; }
+  tr:hover td { background: #20233a; }
+  .preview { color: var(--muted); max-width: 320px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .error { color: var(--red); }
+  .badge { display: inline-block; padding: .15rem .5rem; border-radius: 4px; font-size: .75rem; font-weight: 700;
+            background: #2a2060; color: var(--accent); margin-left: .4rem; }
+</style>
+</head>
+<body>
+<h1>🔬 LLM Evaluation Report <span class="badge">demo_experiment</span></h1>
+<p class="meta">
+  Model: <strong>claude-sonnet-4-20250514</strong> &nbsp;|&nbsp;
+  Timestamp: 2026-03-05T21:42:57.009741 &nbsp;|&nbsp;
+  Templates tested: direct, expert_framing, step_by_step, structured_output
+</p>
+
+<div class="kpi-grid">
+  <div class="kpi"><div class="label">Best Template</div><div class="value" style="font-size:1.1rem">N/A</div></div>
+  <div class="kpi"><div class="label">Total Runs</div><div class="value">12</div></div>
+  <div class="kpi"><div class="label">Errors</div><div class="value" style="color:var(--red)">12</div></div>
+  <div class="kpi"><div class="label">Avg Latency</div><div class="value">0<span style="font-size:.8rem;color:var(--muted)"> ms</span></div></div>
+</div>
+
+<h2>Template Summary</h2>
+<table>
+  <thead><tr><th>Template</th><th>Mean Score</th><th>Min</th><th>Max</th></tr></thead>
+  <tbody></tbody>
+</table>
+
+<h2>All Results</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Template</th><th>Case</th><th>Overall</th>
+      <th>Keyword Coverage</th><th>Forbidden Penalty</th><th>Length</th><th>Coherence</th>
+      <th>Latency (ms)</th><th>Output Preview</th><th>Error</th>
+    </tr>
+  </thead>
+  <tbody><tr><td>direct</td><td>tc_photosynthesis</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECotrP4oZPJHeEh2ub'}</td></tr>
+<tr><td>expert_framing</td><td>tc_photosynthesis</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECqJwAxqwsZh6HvkML'}</td></tr>
+<tr><td>step_by_step</td><td>tc_photosynthesis</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECrRQcbMM17yE1mcQm'}</td></tr>
+<tr><td>structured_output</td><td>tc_photosynthesis</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECsX8a4Qpx73c1mZYb'}</td></tr>
+<tr><td>direct</td><td>tc_recursion</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECteMPAARKT9DRWWX2'}</td></tr>
+<tr><td>expert_framing</td><td>tc_recursion</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECujqMXZBMqcTF7kHs'}</td></tr>
+<tr><td>step_by_step</td><td>tc_recursion</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECvrJuj7TAFxeBNAwZ'}</td></tr>
+<tr><td>structured_output</td><td>tc_recursion</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECwzGLqb5raHBCKzDQ'}</td></tr>
+<tr><td>direct</td><td>tc_climate_change</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECy8UfmB4dy4fgZ4c6'}</td></tr>
+<tr><td>expert_framing</td><td>tc_climate_change</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkECzFT66rgsZaQPuh2p'}</td></tr>
+<tr><td>step_by_step</td><td>tc_climate_change</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkED1YahpibL6mje3bym'}</td></tr>
+<tr><td>structured_output</td><td>tc_climate_change</td><td>0.2500</td><td>0.000</td><td>1.000</td><td>0.000</td><td>0.000</td><td>0</td><td class="preview">…</td><td class="error">Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CYkED2g3tEUBJnKjJk26X'}</td></tr>
+</tbody>
+</table>
+</body>
+</html>
