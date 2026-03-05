@@ -1,138 +1,109 @@
-![LLM Evaluation Framework]
+# LLM Evaluation Framework
 
 A lightweight framework for evaluating prompt strategies across Large Language Model (LLM) tasks using automated scoring metrics and experiment reports.
 
+> Useful for comparing prompt engineering strategies before deploying to production.
 
-
+---
 
 ## Evaluation Dashboard
 
 ![LLM Evaluation Report](dashboard.png)
 
-
-
-
-\## Features
-
-
-\- Compare multiple prompt strategies
-
-\- Run experiments across multiple test cases
-
-\- Automated evaluation metrics:
-
-  - Keyword coverage
-
-  - Forbidden word detection
-
-  - Response length scoring
-
-  - Coherence heuristic
-
-\- Generates experiment reports in:
-
-  - HTML dashboard
-
-  - Markdown
-
-  - JSON
 ---
 
+## Features
 
-\## Project Structure
+- Compare multiple prompt strategies
+- Run experiments across multiple test cases
+- Automated evaluation metrics:
+  - Keyword coverage
+  - Forbidden word detection
+  - Response length scoring
+  - Coherence heuristic
+- Generates experiment reports in:
+  - HTML dashboard
+  - Markdown
+  - JSON
 
+---
 
-llm-eval-framework
+## Project Structure
 
+```
+llm-eval-framework/
 │
-
-├── eval\_framework.py
-
-├── eval\_reports/
-
-│   ├── demo\_experiment\_report.html
-
-│   ├── demo\_experiment\_report.md
-
-│   └── demo\_experiment\_report.json
-
-
-
+├── eval_framework.py
+├── README.md
+├── requirements.txt
+├── .gitignore
+└── eval_reports/          ← auto-created on first run
+    ├── demo_experiment_report.html
+    ├── demo_experiment_report.md
+    └── demo_experiment_report.json
+```
 
 ---
-\## Tech Stack
 
+## Tech Stack
 
-\- Python
+- Python 3.10+
+- Anthropic API
+- Prompt Engineering
+- LLM Evaluation
 
-\- Anthropic API
+---
 
-\- Prompt Engineering
-
-\- LLM Evaluation
-
-
-
-\## Running the Framework
-
+## Running the Framework
 
 Requires Python 3.10+
 
+### 1. Install dependencies
 
-Install dependencies: 
 ```bash
 pip install anthropic
 ```
 
+### 2. Set your API key
 
+On Linux/Mac:
+```bash
+export ANTHROPIC_API_KEY="your-api-key"
+```
 
+On Windows PowerShell:
+```powershell
+$env:ANTHROPIC_API_KEY="your-api-key"
+```
 
-\### Set your API key
+### 3. Run the evaluation
 
+```bash
+python eval_framework.py
+```
 
-On Linux/Mac: export ANTHROPIC\_API\_KEY="your-api-key"
+Reports will be generated inside `eval_reports/` and include:
 
-On Windows PowerShell: $env:ANTHROPIC\_API\_KEY="your-api-key"
-
-
-
-\### Run the evaluation: python eval\_framework.py
-
-
-Reports will be generated inside: eval\_reports/
-These include:
-
-\- HTML dashboard
-
-\- Markdown report
-
-\- JSON experiment data
-
-
+- HTML dashboard
+- Markdown report
+- JSON experiment data
 
 ---
+
+## Output
+
 After running the framework, an HTML dashboard is generated showing:
 
-
-\- prompt template performance
-
-\- evaluation metrics
-
-\- experiment summaries
-
-
+- Prompt template performance
+- Evaluation metrics
+- Experiment summaries
 
 ---
-\## Author
+
+## Author
 
 Nishtha Sharma
- 
 
-\## License
+## License
+
 MIT
-
-
-
-
-
-
