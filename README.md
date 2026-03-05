@@ -1,4 +1,4 @@
-\# LLM Evaluation Framework
+![LLM Evaluation Framework]
 
 A lightweight framework for evaluating prompt strategies across Large Language Model (LLM) tasks using automated scoring metrics and experiment reports.
 
@@ -36,7 +36,7 @@ A lightweight framework for evaluating prompt strategies across Large Language M
   - Markdown
 
   - JSON
-
+---
 
 
 \## Project Structure
@@ -59,7 +59,7 @@ llm-eval-framework
 
 
 
-
+---
 \## Tech Stack
 
 
