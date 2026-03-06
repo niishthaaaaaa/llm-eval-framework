@@ -38,9 +38,9 @@ llm-eval-framework/
 ├── requirements.txt
 ├── .gitignore
 └── eval_reports/          ← auto-created on first run
-    ├── demo_experiment_report.html
-    ├── demo_experiment_report.md
-    └── demo_experiment_report.json
+    ├── full_experiment_report.html
+    ├── full_experiment_report.md
+    └── full_experiment_report.json
 ```
 
 ---
@@ -92,7 +92,7 @@ Reports will be generated inside `eval_reports/` and include:
 
 ## Output
 
-After running the framework, an HTML dashboard is generated showing:
+After running the framework across 10 test cases and 4 prompt templates (40 total runs), an HTML dashboard is generated showing:
 
 - Prompt template performance
 - Evaluation metrics
