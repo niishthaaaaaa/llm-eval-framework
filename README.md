@@ -38,9 +38,9 @@ llm-eval-framework/
 ├── requirements.txt
 ├── .gitignore
 └── eval_reports/          ← auto-created on first run
-    ├── full_experiment_report.html
-    ├── full_experiment_report.md
-    └── full_experiment_report.json
+    ├── demo_experiment_report.html
+    ├── demo_experiment_report.md
+    └── demo_experiment_report.json
 ```
 
 ---
@@ -48,7 +48,7 @@ llm-eval-framework/
 ## Tech Stack
 
 - Python 3.10+
-- Anthropic API
+- Google Gemini API (free tier)
 - Prompt Engineering
 - LLM Evaluation
 
@@ -61,19 +61,19 @@ Requires Python 3.10+
 ### 1. Install dependencies
 
 ```bash
-pip install anthropic
+pip install google-generativeai
 ```
 
 ### 2. Set your API key
 
 On Linux/Mac:
 ```bash
-export ANTHROPIC_API_KEY="your-api-key"
+export GEMINI_API_KEY="your-api-key"
 ```
 
 On Windows PowerShell:
 ```powershell
-$env:ANTHROPIC_API_KEY="your-api-key"
+$env:GEMINI_API_KEY="your-api-key"
 ```
 
 ### 3. Run the evaluation
@@ -92,7 +92,7 @@ Reports will be generated inside `eval_reports/` and include:
 
 ## Output
 
-After running the framework across 10 test cases and 4 prompt templates (40 total runs), an HTML dashboard is generated showing:
+After running the framework, an HTML dashboard is generated showing:
 
 - Prompt template performance
 - Evaluation metrics
