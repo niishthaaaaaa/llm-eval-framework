@@ -8,7 +8,7 @@ Usage:
     python eval_framework.py
 
 Requirements:
-    pip install anthropic rich pandas jinja2
+    pip install google-generativeai
 """
 
 import json
@@ -20,7 +20,8 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Any
 
-import anthropic
+import os
+from google import genai
 
 
 # ─────────────────────────────────────────────
@@ -140,8 +141,8 @@ class Scorer:
 # ─────────────────────────────────────────────
 
 class EvalRunner:
-    def __init__(self, model: str = "claude-sonnet-4-20250514", max_tokens: int = 512):
-        self.client = anthropic.Anthropic()
+    def __init__(self, model: str = "gemini-2.0-flash", max_tokens: int = 512):
+        self.client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
         self.model = model
         self.max_tokens = max_tokens
         self.scorer = Scorer()
@@ -157,13 +158,12 @@ class EvalRunner:
         )
         try:
             t0 = time.perf_counter()
-            response = self.client.messages.create(
+            response = self.client.models.generate_content(
                 model=self.model,
-                max_tokens=self.max_tokens,
-                messages=[{"role": "user", "content": prompt}],
+                contents=prompt,
             )
             result.latency_ms = round((time.perf_counter() - t0) * 1000, 1)
-            result.raw_output = response.content[0].text
+            result.raw_output = response.text
         except Exception as exc:
             result.error = str(exc)
             result.latency_ms = 0.0
@@ -548,8 +548,8 @@ def run_demo():
         ),
     ]
 
-    runner = EvalRunner(model="claude-sonnet-4-20250514", max_tokens=600)
-    report = runner.run_experiment(templates, test_cases, experiment_id="demo_experiment")
+    runner = EvalRunner(model="gemini-2.0-flash", max_tokens=600)
+    report = runner.run_experiment(templates, test_cases, experiment_id="full_experiment")
 
     # ── Save outputs ──────────────────────────────────────────────────────
     out = Path("eval_reports")
